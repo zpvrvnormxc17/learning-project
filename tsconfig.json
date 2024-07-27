@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"noImplicitAny": true,
+		"module": "ESNext",
+		"target": "es5",
+		"jsx": "react-jsx",
+		"allowJs": true,
+		"moduleResolution": "node",
+		// "baseUrl": ".",
+		// Делает импорты более привычными тоесть не
+		// import * as _ from a просто import _ from
+		// позволяет работать с пакетами которые используют common js как с обычными пакетами с помощью import (require() module.export) = common  js
+		// import Moment from 'moment';
+		// без флага esModuleInterop результат undefined
+		// console.log(Moment)
+		// c флагом результат [object, Object]
+		// console.log(Moment)
+		"esModuleInterop": true,
+
+		// не поддерживает дефолтный ехпорт блин и импорт гм ...
+
+		"allowSyntheticDefaultImports": true
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	}
+}
